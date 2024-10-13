@@ -85,7 +85,7 @@ const onValueChange = (e) =>{
 const loginUser = async()=>{
     
     try {
-        const response = await axios.post('https://blogapplication-q26h.onrender.com/login',login);
+        const response = await axios.post('https://blogapp2-wc6e.onrender.com/login',login);
         setError('');
 
         sessionStorage.setItem('accesstoken', `Bearer ${response.data.accesstoken}`);
@@ -117,7 +117,7 @@ const signupUser=async()=>{
     
     try {
        
-        const response=await axios.post('https://blogapplication-q26h.onrender.com/signup',signup);
+        const response=await axios.post('https://blogapp2-wc6e.onrender.com/signup',signup);
         toggleAccount('login')
         setError('');
     } catch (error) {

@@ -39,7 +39,7 @@ const Comment = ({ comment, setToggle }) => {
     const { account } = useContext(DataContext)
    
     const removeComment = async () => {
-       await axios.delete(`https://blogapplication-q26h.onrender.com/comment/delete/${comment._id}`,{
+       await axios.delete(`https://blogapp2-wc6e.onrender.com/comment/delete/${comment._id}`,{
                 
        headers:{
            authorization: getAccessToken()

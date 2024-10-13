@@ -50,7 +50,7 @@ const Des = styled(Typography)`
     const navigate = useNavigate();
     useEffect(()=>{
         const fetchdata = async()=>{
-             let repsonse = await axios.get(`https://blogapplication-q26h.onrender.com/post/${id}`,{
+             let repsonse = await axios.get(`https://blogapp2-wc6e.onrender.com/post/${id}`,{
                 
                 headers:{
                     authorization: getAccessToken()
@@ -63,7 +63,7 @@ const Des = styled(Typography)`
     },[])
     const deleteBlog = async () => {  
         console.log("deleteBlog");
-        await axios.delete(`https://blogapplication-q26h.onrender.com/delete/${id}`,{
+        await axios.delete(`https://blogapp2-wc6e.onrender.com/delete/${id}`,{
                 
         headers:{
             authorization: getAccessToken()

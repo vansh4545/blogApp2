@@ -19,12 +19,12 @@ const  Posts= ()=>{
     
     useEffect(()=>{
         const fetchData = async() => {
-           let response = await axios.get('https://blogapplication-q26h.onrender.com/posts',{ params: {
+           let response = await axios.get('https://blogapp2-wc6e.onrender.com/posts',{ params: {
             category: category || ''
-          },
-            headers:{
-                authorization: getAccessToken()
-            }
+          }
+            // headers:{
+            //     authorization: getAccessToken()
+            // }
         });
           
               setPosts(response.data);

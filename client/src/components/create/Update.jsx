@@ -59,7 +59,7 @@ const Update =()=>{
     useEffect(()=>{
         const fetchdata = async()=>{
            
-             let repsonse = await axios.get(`https://blogapplication-q26h.onrender.com/post/${id}`,{
+             let repsonse = await axios.get(`https://blogapp2-wc6e.onrender.com/post/${id}`,{
                 
                 headers:{
                     authorization: getAccessToken()
@@ -77,7 +77,7 @@ const Update =()=>{
                 data.append("name",file.name);
                 data.append("file",file);
 
-                const  response= await axios.post('https://blogapplication-q26h.onrender.com/file/upload',data);
+                const  response= await axios.post('https://blogapp2-wc6e.onrender.com/file/upload',data);
                 post.picture = response.data.imageUrl;
             }
         }
@@ -90,7 +90,7 @@ const Update =()=>{
     
     const updateBlogPost = async()=>{
        
-         await axios.put(`https://blogapplication-q26h.onrender.com/update/${id}`,post,{
+         await axios.put(`https://blogapp2-wc6e.onrender.com/update/${id}`,post,{
             headers:{
                 authorization: getAccessToken()
             }

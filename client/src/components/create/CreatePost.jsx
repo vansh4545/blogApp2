@@ -60,7 +60,7 @@ const CreatePost =()=>{
                 data.append("name",file.name);
                 data.append("file",file);
 
-                const  response= await axios.post('https://blogapplication-q26h.onrender.com/file/upload',data);
+                const  response= await axios.post('https://blogapp2-wc6e.onrender.com/file/upload',data);
                 post.picture = response.data.imageUrl;
             }
         }
@@ -73,7 +73,7 @@ const CreatePost =()=>{
     
     const savePost = async()=>{
        
-        let response = await axios.post('https://blogapplication-q26h.onrender.com/create',post,{
+        let response = await axios.post('https://blogapp2-wc6e.onrender.com/create',post,{
             headers:{
                 authorization: getAccessToken()
             }

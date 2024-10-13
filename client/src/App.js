@@ -15,7 +15,7 @@ import DetailsView from './components/details/DetailsView.jsx';
 const PrivateRoute =({isAuthenticated,...props})=>{
   return isAuthenticated ?
   <>
-  <Header/>
+  <Header isAuthenticated={isAuthenticated}/>
   <Outlet/>
   </>
    : <Navigate replace to ='/login'/>
@@ -33,7 +33,7 @@ function App() {
         <Routes>
         <Route path='/login' element={<Login isUserAuthenticated={isUserAuthenticated}/>}/>
 
-        <Route path='/' element={<PrivateRoute isAuthenticated={isAuthenticated}/>} >
+        <Route path='/' >
           <Route path='/' element={<Home/>}/>
         </Route>
 

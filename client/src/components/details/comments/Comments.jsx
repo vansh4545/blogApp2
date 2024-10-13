@@ -45,7 +45,7 @@ const Comments = ({ post }) => {
 
     useEffect(() => {
         const getData = async () => {
-            const response = await axios.get(`https://blogapplication-q26h.onrender.com/comments/${id}`,{
+            const response = await axios.get(`https://blogapp2-wc6e.onrender.com/comments/${id}`,{
                 
             headers:{
                 authorization: getAccessToken()
@@ -68,7 +68,7 @@ const Comments = ({ post }) => {
     }
 
     const addComment = async() => {
-       let response =  await axios.post('https://blogapplication-q26h.onrender.com/comment/new',comment,{
+       let response =  await axios.post('https://blogapp2-wc6e.onrender.com/comment/new',comment,{
                 
         headers:{
             authorization: getAccessToken()

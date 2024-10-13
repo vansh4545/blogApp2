@@ -16,14 +16,15 @@ const Container = styled(Toolbar)`
         text-decoration: none;
     }
 `
-const Header = () => {
+const Header = (isAuthenticated) => {
     return (
         <Component>
             <Container>
                <Link to='/'>Home</Link>
                <Link to = '/contact'>Contact</Link>
                <Link to = '/about'>About</Link>
-               <Link to='/login'>Logout</Link>
+               isAuthenticated ? <Link to='/login'>Logout</Link> :<Link to='/login'>Login</Link>
+               
             </Container>
         </Component>
     )
