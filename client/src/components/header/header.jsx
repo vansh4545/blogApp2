@@ -24,7 +24,7 @@ const Header = ({isAuthenticated}) => {
                <Link to = '/contact'>Contact</Link>
                <Link to = '/about'>About</Link>
                {isAuthenticated ? (
-                   <Link to='/logout'>Logout</Link>
+                   <Link to='/login'>Logout</Link>
                ) : (
                    <Link to='/login'>Login</Link>
                )}
