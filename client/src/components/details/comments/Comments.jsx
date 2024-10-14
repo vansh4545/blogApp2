@@ -45,12 +45,9 @@ const Comments = ({ post }) => {
 
     useEffect(() => {
         const getData = async () => {
-            const response = await axios.get(`https://blogapp2-wc6e.onrender.com/comments/${id}`,{
-                
-            headers:{
-                authorization: getAccessToken()
-            }
-        });
+            const response = await axios.get(`https://blogapp2-wc6e.onrender.com/comments/${id}`
+           
+        );
             
             setComments(response.data);
             
