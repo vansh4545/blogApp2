@@ -14,8 +14,8 @@ router.post('/file/upload',upload.single('file'), uploadimage);
 router.get('/file/:filename',getImage);
 
 router.post('/create',authenticateToken,createPost);
-router.get('/posts',authenticateToken,getallPosts);
-router.get('/post/:id',authenticateToken,getPost);
+router.get('/posts',getallPosts);
+router.get('/post/:id',getPost);
 router.put('/update/:id', authenticateToken, updatePost);
 router.delete('/delete/:id',authenticateToken,deletePost);
 

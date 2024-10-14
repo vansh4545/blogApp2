@@ -2,9 +2,11 @@ import Categories from "./categories";
 import Banner from "../components/banner/banner";
 import {Grid} from '@mui/material';
 import Posts from "./post/Posts.jsx";
-const Home = () =>{
+import Header from "../components/header/header.jsx";
+const Home = ({isAuthenticated}) =>{
     return (
         <>
+            <Header isAuthenticated={isAuthenticated}/>
             <Banner/>
             <Grid container> 
                 <Grid item lg={2} sm={2} xs={12}>

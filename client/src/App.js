@@ -15,12 +15,21 @@ import DetailsView from './components/details/DetailsView.jsx';
 const PrivateRoute =({isAuthenticated,...props})=>{
   return isAuthenticated ?
   <>
-  <Header isAuthenticated={isAuthenticated}/>
+   <Header/>
   <Outlet/>
   </>
    : <Navigate replace to ='/login'/>
   
 }
+// const PrivateRoute2 =({isAuthenticated,...props})=>{
+//   return isAuthenticated ?
+//   <>
+//    <Header/>
+//   <Outlet/>
+//   </>
+//    : <Navigate replace to ='/'/>
+  
+// }
 function App() {
 
    const [isAuthenticated,isUserAuthenticated] = useState(false);
@@ -34,7 +43,7 @@ function App() {
         <Route path='/login' element={<Login isUserAuthenticated={isUserAuthenticated}/>}/>
 
         <Route path='/' >
-          <Route path='/' element={<Home/>}/>
+               <Route path='/' element={<Home isAuthenticated={isAuthenticated}/>}/>
         </Route>
 
         <Route path='/create' element={<PrivateRoute isAuthenticated={isAuthenticated}/>} >
