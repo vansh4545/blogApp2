@@ -50,12 +50,12 @@ const Des = styled(Typography)`
     const navigate = useNavigate();
     useEffect(()=>{
         const fetchdata = async()=>{
-             let repsonse = await axios.get(`https://blogapp2-wc6e.onrender.com/post/${id}`,{
+             let repsonse = await axios.get(`https://blogapp2-wc6e.onrender.com/post/${id}`
                 
-                headers:{
-                    authorization: getAccessToken()
-                }
-            });
+                // headers:{
+                //     authorization: getAccessToken()
+                // }
+            );
 
              setPost(repsonse.data)
         }
